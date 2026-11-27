@@ -40,9 +40,11 @@
         "projection": "This plugin projects the same agents and skills into every host agent-doc standard. Host packaging differs; agent identity does not fork.",
         "notHostUniqueForks": true
       },
-      "acceptance": "pending",
+      "acceptance": "packaging_declared",
       "agentDocStandard": "hermes",
-      "artifact": "hosts/hermes context-file projection"
+      "artifact": "hosts/hermes context-file projection",
+      "liveAcceptance": "pending",
+      "of90": "closed_as_packaging_declared"
     },
     "cursor": {
       "pluginId": "omatic-governance",
@@ -70,12 +72,14 @@
         "projection": "This plugin projects the same agents and skills into every host agent-doc standard. Host packaging differs; agent identity does not fork.",
         "notHostUniqueForks": true
       },
-      "acceptance": "pending",
+      "acceptance": "packaging_declared",
       "host": "m365-copilot",
       "agentDocStandard": "m365-copilot",
       "artifact": "omatic-server-0.1.7-mcp.zip",
       "authorization": "existing OAuthPluginVault reference preserved; not rewritten",
-      "declarativeAgentRequired": false
+      "declarativeAgentRequired": false,
+      "liveAcceptance": "pending",
+      "of90": "closed_as_packaging_declared"
     },
     "codex": {
       "pluginId": "omatic-governance",
@@ -114,13 +118,13 @@
     "codex/hooks/tool-names.json": "91adc29e88d7654d58acae816d9698de51daa1df669b6cf50aa5a2dae2c5878d",
     "codex/hooks/preflight.py": "e434ad1db0760f6972fd42296e50ec575dae6ab7c51fc21d05fe64b63fbe9995",
     "copilot/omatic-server-0.1.7-mcp.zip": "0182aba3f9fed95ad1a9ab8e1d6bb0983d552c4903f8173ade5d8d89cb1fcc44",
-    "copilot/HOST.json": "80c8a942394cbc12708833b65684f97002d7b5720fea3ac1923b9d9f15d438e8",
+    "copilot/HOST.json": "7bb00b8e8ce71fa361eeed7ec7236a628f32b1d20d8ac68ccad427619cc3466f",
     "grok/MCP-SETUP.json": "fde82127d0d9d6b8c7f34d02f2438cd094ed8124244d08bae231c031e694660d",
     "PLUGIN-IDENTITY.json": "9b38f4b1759258584c55e1b73eeb3210545c3f148da0408ea92776bbeaa35e2d",
     "agents/DOC-STANDARDS.json": "2791cdb1f36dac553b76f008428dea1a67f86a2e356336f414847f07b08cd64a",
     "agents/PROJECTION.json": "37d099847a4a965237e4663b99edb3b01164e5b6c1b8a111b15317d844cf4d2b",
     "cursor/HOST.json": "8c571e1f2f6bc98842e44f3d8c84f601bcdac9267a0be4bf79aca7ff78be0a68",
-    "hermes/HOST.json": "9f05f31784d85321e21aac49e8a9df18db8c2e4a67c4086f6c0ef74674915d5b",
+    "hermes/HOST.json": "e842cbd8c025368dee53bcb952d40ef6930b0587dc940ea809fa54014917b9ac",
     "openclaw/HOST.json": "ae5d78713ef6ea3cdec2acb4b696b53859a4969b038cbf02fae4ea4717dbbed9"
   },
   "externalGates": [
@@ -129,5 +133,10 @@
     "Copilot: signed-in tenant connector acceptance; no new app or auth",
     "Grok: live MCP connection check; no client enforcement exists to install",
     "Cursor: Desktop beforeMCPExecution intercept on a Desktop agent path (Project agent MCP bypasses hooks)"
-  ]
+  ],
+  "of90": {
+    "status": "packaging_complete",
+    "mergedPr": "https://github.com/lucidIT-LLC/o-matic-server-connector/pull/1",
+    "copilotHermes": "packaging_declared_not_live_accepted"
+  }
 }

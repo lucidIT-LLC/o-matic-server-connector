@@ -25,7 +25,7 @@
       "component": "hosts/hermes agent-doc projection (AGENTS.md / HERMES.md / SOUL.md from gold)",
       "pluginId": "omatic-governance",
       "agentDocStandard": "hermes",
-      "acceptance": "pending",
+      "acceptance": "packaging_declared",
       "localAdapter": false,
       "doesNot": "invent a Hermes-only personality or ship a second plugin id"
     },
@@ -47,7 +47,7 @@
       "component": "m365-adapter.mjs + hosts/copilot zip projection",
       "pluginId": "omatic-governance",
       "agentDocStandard": "m365-copilot",
-      "acceptance": "pending",
+      "acceptance": "packaging_declared",
       "prepares": "an existing RemoteMCPServer manifest offline",
       "doesNot": "sign in, register workers, invent a Copilot-only fork, or validate a tenant package"
     },
@@ -77,5 +77,9 @@
     "m365-adapter.mjs": "c8468e31727479f3dafec555e39955a8d946bb8617cf6776aa0de4d7f75baee5",
     "openclaw.plugin.json": "489880a469379484c4f7151488394e1ccee7faf226eff17cd73d82109fca1178",
     "release-entry.mjs": "f407543e92c95ac85f9cbfdef12cff544cad8973c13d86482ef3053ccc03b2dd"
+  },
+  "of90Closeout": {
+    "pr": "https://github.com/lucidIT-LLC/o-matic-server-connector/pull/1",
+    "copilotHermes": "packaging_declared; tenant/live packs not claimed"
   }
 }
