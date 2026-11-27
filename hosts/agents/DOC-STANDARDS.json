@@ -1,0 +1,61 @@
+{
+  "pluginId": "omatic-governance",
+  "doctrine": "AI is AI \u2014 one gold in DB; this plugin projects agents/skills into each host's documented agent-doc files. File names and install paths differ by host; content is a projection, not a host-unique fork.",
+  "gold": {
+    "agents": "factory.persona* / persona_version",
+    "skills": "canonical SKILL.md / persona skill gold",
+    "iconsVoiceTools": "from gold; hosts surface them"
+  },
+  "standards": {
+    "openclaw": {
+      "kind": "workspace bootstrap files",
+      "requiredFiles": [
+        "AGENTS.md",
+        "SOUL.md",
+        "IDENTITY.md",
+        "USER.md"
+      ],
+      "optionalFiles": [
+        "BOOTSTRAP.md",
+        "MEMORY.md"
+      ],
+      "notes": "OpenClaw injects these into Project Context on new sessions. Projection fills the roster from gold; do not invent a second OpenClaw-only persona."
+    },
+    "hermes": {
+      "kind": "Hermes Agent context files (Nous Research)",
+      "projectContextPriority": [
+        ".hermes.md",
+        "HERMES.md",
+        "AGENTS.override.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        ".cursorrules"
+      ],
+      "identity": [
+        "SOUL.md (HERMES_HOME global personality)"
+      ],
+      "notes": "Project AGENTS.md / HERMES.md from the same gold as OpenClaw AGENTS.md+SOUL voice. Do not maintain a Hermes-only personality fork. SOUL.md remains instance-global per Hermes rules."
+    },
+    "m365-copilot": {
+      "kind": "Microsoft 365 Copilot + GitHub Copilot agent docs",
+      "files": [
+        "SKILL.md (Agent Skills open standard \u2014 same bytes as Claude where possible)",
+        "adapters/copilot/.github/agents/<role>.agent.md (GitHub Copilot path)",
+        "M365 declarative agent / appPackage projection when emitting tenant packages"
+      ],
+      "forbiddenFork": ".agent.md custom-agent bodies as the primary distribution (decision #304) \u2014 prefer SKILL.md",
+      "notes": "Copilot packaging is a host projection of this same plugin. Connector zip is MCP connection packaging, not a separate Copilot product. Agents emit from gold on the fly when needed."
+    },
+    "cursor": {
+      "kind": "Cursor plugin agents + skills + method cards",
+      "files": [
+        "plugin agents named by roster (probot, fred, data, \u2026)",
+        "skills/<name>/SKILL.md",
+        "adapters/cursor/<role>.md method cards",
+        "optional .cursor/rules pointers (not a substitute for SKILL.md)"
+      ],
+      "notes": "Cursor and Copilot share this plugin identity. MCP comes from the host o-MATIC Server connection, not per-agent secrets."
+    }
+  },
+  "coverageRule": "Every requiredHostAgentDocStandards entry must have a filled projection path from gold. Leaving a host out is a packaging defect."
+}

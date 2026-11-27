@@ -1,9 +1,12 @@
 # o-MATIC Factory package — candidate contract
 
-Operator direction, November 26, 2026: launch o-MATIC Server with platform
-plugins and downloadable, installable agents as one full factory package.
-Bundle MCP setup where the host supports it. Preserve existing full agents and
-their conversations rather than silently substituting child sessions.
+Operator direction, November 26, 2026 (clarified Jimmy 2026-11-27): launch
+o-MATIC Server with **one** multi-platform connector plugin that projects
+downloadable, installable agents and skills from **DB gold** into every host
+agent-doc standard (OpenClaw, Hermes, Copilot, Cursor — and other host
+projections). **AI is AI** — packaging differs by host; agent identity does not
+fork. Bundle MCP setup where the host supports it. Preserve existing full
+agents and their conversations rather than silently substituting child sessions.
 
 ## Installation experience
 
@@ -19,11 +22,17 @@ separate control plane. Installation does not grant factory/database access.
 
 ## Release units
 
+- One plugin id (`omatic-governance`) across hosts; Cursor and Copilot are not
+  separate connector forks.
 - One versioned release manifest, checksums, source provenance and rollback.
-- Host-specific connection packaging, not one falsely universal plugin format.
+- Host-specific connection packaging, not one falsely universal binary format.
+- Required host agent-doc standards filled from gold: OpenClaw, Hermes,
+  Copilot, Cursor (`hosts/agents/DOC-STANDARDS.json`). Leaving a host out is a
+  packaging defect.
 - Native governance adapter where available, with exact coverage declared.
-- Individually selectable agent profiles generated from their actual designed
-  roles, plus host-specific installation adapters. Profiles are not permissions.
+- Individually selectable agent profiles projected from factory gold roles,
+  plus host-specific installation adapters. Profiles are not permissions and
+  are not host-unique personality forks.
 - Shared startup/context-isolation/memory contract and role-scoped resources.
 - Explicit model policy: preserve approved host settings; do not switch models
   or providers as a side effect of installing agent files. Research-based model

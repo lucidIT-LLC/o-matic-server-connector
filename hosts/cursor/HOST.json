@@ -1,0 +1,28 @@
+{
+  "host": "cursor",
+  "pluginId": "omatic-governance",
+  "candidateVersion": "1.0.1-candidate.4",
+  "samePluginAs": [
+    "m365-copilot",
+    "openclaw",
+    "hermes",
+    "codex",
+    "grok"
+  ],
+  "agentsIncluded": true,
+  "skillsIncluded": true,
+  "agentDocStandard": "cursor",
+  "package": {
+    "kind": "hooks-plus-mcp-plus-agent-projection",
+    "hooks": "hooks/hooks.json",
+    "preflight": "hooks/preflight.py",
+    "mcp": "reuse host MCP entry for o-MATIC Server (default https://factory.o-matic.ai/mcp)",
+    "agentsSkills": "project roster agents + SKILL.md from gold (not Cursor-only forks)"
+  },
+  "acceptance": "pending",
+  "measuredOnJimmyMac": {
+    "hooksLoad": true,
+    "startupReady": true,
+    "liveBeforeMCPExecutionOnProjectAgentPath": false
+  }
+}

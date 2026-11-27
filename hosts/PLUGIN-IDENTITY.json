@@ -1,0 +1,28 @@
+{
+  "pluginId": "omatic-governance",
+  "product": "o-MATIC Server Connector",
+  "candidateVersion": "1.0.1-candidate.4",
+  "onePlugin": true,
+  "agentsIncluded": true,
+  "skillsIncluded": true,
+  "doctrine": {
+    "aiIsAi": true,
+    "gold": "factory.persona* / persona_version (and skill gold) \u2014 one record in the DB",
+    "projection": "This plugin projects the same agents and skills into every host agent-doc standard. Host packaging differs; agent identity does not fork.",
+    "notHostUniqueForks": true
+  },
+  "requiredHostAgentDocStandards": [
+    "openclaw",
+    "hermes",
+    "m365-copilot",
+    "cursor"
+  ],
+  "alsoProjectedHosts": [
+    "codex",
+    "grok"
+  ],
+  "cursorAndCopilot": {
+    "samePlugin": true,
+    "note": "Cursor and Copilot are host projections of this connector plugin (agents + skills included). Not separate forks; not a Supply-only MCP zip product."
+  }
+}
