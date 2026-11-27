@@ -1,0 +1,38 @@
+{
+  "product": "o-MATIC cross-host connection candidate",
+  "status": "NOT_APPROVED",
+  "universalHarness": false,
+  "installed": false,
+  "packages": {
+    "codex": {
+      "version": "1.0.1-candidate.6",
+      "acceptance": "pending",
+      "coverage": "Declared startup/search/factory_query argument shape and existing narrow SELECT classifier only. Generic SQL mutations refused: no exact-SQL approval bridge exists. SELECT-function purity is not proven. Server validates proof authenticity, expiry and scope. No proof cache or identity inference. Other tool aliases, including owner DDL, are uncovered and remain subject to actual host/Server policy."
+    },
+    "copilot": {
+      "artifact": "omatic-server-0.1.7-mcp.zip",
+      "acceptance": "pending",
+      "authorization": "existing OAuthPluginVault reference preserved; not rewritten",
+      "declarativeAgentRequired": false
+    },
+    "grok": {
+      "acceptance": "pending",
+      "clientEnforcement": false
+    }
+  },
+  "files": {
+    "codex/plugin.json": "9dbf57dd8aab7fd98db61d7e569acef3f4fb840be91557fc15f90e813666dc5c",
+    "codex/hooks/hooks.json": "86e651b9898e663a4d4c7b1071dda436279965a639a75c19e7d0c59ac67cc035",
+    "codex/.codex-plugin/plugin.json": "6cc562809b08af539a36a7004039647b17c1d653396ba8d92739c43638f1f7c7",
+    "codex/hooks/tool-names.json": "91adc29e88d7654d58acae816d9698de51daa1df669b6cf50aa5a2dae2c5878d",
+    "codex/hooks/preflight.py": "e434ad1db0760f6972fd42296e50ec575dae6ab7c51fc21d05fe64b63fbe9995",
+    "copilot/omatic-server-0.1.7-mcp.zip": "0182aba3f9fed95ad1a9ab8e1d6bb0983d552c4903f8173ade5d8d89cb1fcc44",
+    "grok/MCP-SETUP.json": "0dabfd183437e30325f788d11cc9e8aae5988ba28dfb7f6ba9b09b35f8f14493"
+  },
+  "externalGates": [
+    "Codex: owner hook trust, install, and a live refusal that stops multistatement SQL before the Server",
+    "Copilot: signed-in tenant connector acceptance; no new app or auth",
+    "Grok: live MCP connection check; no client enforcement exists to install",
+    "OpenClaw: separate host plugin remains uninstalled"
+  ]
+}

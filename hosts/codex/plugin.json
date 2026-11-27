@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "omatic-governance",
+  "version": "1.0.1-candidate.6",
+  "description": "Existing o-MATIC connection argument/read guards; generic SQL mutations refused; no workflow enforcement.",
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json"
+    }
+  }
+}

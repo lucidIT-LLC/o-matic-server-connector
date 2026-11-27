@@ -1,0 +1,55 @@
+{
+  "product": "o-MATIC Server connection candidate",
+  "status": "NOT_APPROVED",
+  "wholeProductIsNot": "The OpenClaw tarball under isolated-pack-not-approved is one host package. It is not the Codex, Copilot, or Grok candidate.",
+  "liveInstall": "not performed",
+  "liveOpenClawIndexSha256": "61d989e4f6b1e88e741e6a47331c260e856992e987b4b79ac2bfb44c151743b1",
+  "hosts": {
+    "openclaw": {
+      "component": "plugin-only-candidate index.mjs plus sql-classify.mjs and peer-memory.mjs",
+      "packageEntry": "release-entry.mjs",
+      "acceptance": "pending",
+      "installed": false,
+      "bundleNote": "isolated-pack-not-approved rebuilt dist-runtime only inside that copy. The candidate tree dist-runtime was not rebuilt. The copy is not installed."
+    },
+    "codex": {
+      "component": "codex-adapter.mjs and codex-preflight.py",
+      "acceptance": "pending",
+      "prepares": "plugin.json, hooks.json, and preflight.py when observed canonical hook names and a source version are supplied",
+      "doesNot": "install hooks, validate the plugin schema on a Codex host, or prove a live refusal"
+    },
+    "m365-copilot": {
+      "component": "m365-adapter.mjs",
+      "acceptance": "pending",
+      "prepares": "an existing RemoteMCPServer manifest offline",
+      "doesNot": "sign in, register workers, or validate a tenant package"
+    },
+    "grok": {
+      "component": null,
+      "acceptance": "pending",
+      "connection": "remote MCP URL only",
+      "localAdapter": false,
+      "doesNot": "intercept a chat turn that never calls the Server, hold a startup proof, or install a plugin"
+    }
+  },
+  "unsupported": [
+    "No host has a measured live startup, guarded read, or peer return for this candidate.",
+    "Exact-SQL operator approval is not integrated on any host.",
+    "Codex preflight is not the Server classify() implementation.",
+    "Grok has no local adapter in this source tree.",
+    "Copilot has no tenant acceptance evidence.",
+    "The config schema now names the older scoped-read tools. That schema is not installed.",
+    "Live Server source was not on this host, so classifier parity with production is unproved."
+  ],
+  "files": {
+    "index.mjs": "f7f455132671fa308dec59d90a2e6083eff55f9dddb9fe6cbf8443a683129be0",
+    "sql-classify.mjs": "8ff049bc629125314c6e1c3846a82cc3b7c4ed0d1b5ee452c919831007897af0",
+    "peer-memory.mjs": "3f3777cefb8d9534bd47ad33150b729513b43f81be909af8593b004232c907a3",
+    "workflow.mjs": "efc503a6ff397e61b832bdbc2999f415ed248824f23805dfb75540577d353fdf",
+    "codex-adapter.mjs": "f7b89afcad8eb2156cf5b4c395d85a8c74995c53fd2248db0a64315d09063fbe",
+    "codex-preflight.py": "e434ad1db0760f6972fd42296e50ec575dae6ab7c51fc21d05fe64b63fbe9995",
+    "m365-adapter.mjs": "c8468e31727479f3dafec555e39955a8d946bb8617cf6776aa0de4d7f75baee5",
+    "openclaw.plugin.json": "991e033556db29992f39923eb6337135dc744583d8d169aab11683f2ccf7ecff",
+    "release-entry.mjs": "e1c1e7bfa51e04367b5bab91347c068a9db23997436bbf8a5b72c3a715e3f20a"
+  }
+}

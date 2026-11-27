@@ -1,0 +1,61 @@
+{
+  "product": "o-MATIC Server Connection",
+  "pluginId": "omatic-governance",
+  "scope": "Stock OpenClaw native external plugin; existing connection and existing full agents only",
+  "implemented": [
+    "legacy known-read guard compatibility",
+    "explicit startup key/proof validation without native rewrites",
+    "bounded correlated READY/catalog observations",
+    "omatic_connection_status public v2 diagnostic tool",
+    "no generic Stop/finalize evidence-reply loop",
+    "no agent dispatch",
+    "authenticated-request RPC receipt reader with code-owned caller/session guard and no credential fallback",
+    "Local Server3.0.7 six-method registration, current-request authchain/startup/governance/tool gate revalidation, dedicated Backend.connect runtime alias adapter and extracted Server-source archive smoke"
+  ],
+  "workflowContract": "omatic.workflow-receipt/2",
+  "workflowRuntimeStatus": "blocked",
+  "identity": "actual authenticated transport principal plus code-owned verified host executor/acceptance provenance; no per-agent credentials",
+  "unavailableProvenance": "executor_unverified",
+  "unbound": [
+    "production current-principal/startup/operation authorization",
+    "verified host executor/assignment/return resolver",
+    "real artifact/readback receipt resolver",
+    "atomic durable receipt ledger",
+    "Server MCP workflow registration"
+  ],
+  "notGuaranteed": [
+    "universal arbitrary-intent routing",
+    "global fail-closed chat finalization",
+    "canonical roster/composition membership from role labels",
+    "production workflow completion from fixtures",
+    "delivery from semantic completion",
+    "automatic MCP catalog repair"
+  ],
+  "platforms": {
+    "OpenClawCodex": "local compiled-entry/guard checks; actual activation/native smoke and workflow acceptance pending",
+    "Microsoft365Copilot": "RemoteMCPServer manifest preparation and contract checks only; actual tenant/schema/Entra/acquired-worker and workflow acceptance pending"
+  },
+  "automaticEffects": {
+    "authChanges": false,
+    "hostConfigurationChanges": false,
+    "databaseWrites": false,
+    "agentDispatch": false,
+    "deployment": false,
+    "routines": false
+  },
+  "releaseReady": false,
+  "releaseGates": [
+    "independent QA/Smith conditions",
+    "actual backend/provenance/storage bindings and live acceptance",
+    "real Spirit Gate/rule350 brand/release clearance"
+  ],
+  "serverBuildTarget": "o-MATIC Server 3.0.7",
+  "backendCandidate": "Real PostgreSQL adapter + supported Server migrate/ownership/packaging overlays; locally tested, production ports still unbound",
+  "executionApproval": "Historical relay is unverified scope metadata, not exact live-change authority. LANDING-PLAN.md v3 G6 and parent reconciliation govern.",
+  "authenticatedRequestRpc": "omatic.connection.workflowStatus; optional receiptStatusTool; real production backend bindings still unavailable",
+  "productionLimit": "Actual configured dedicated alias/login, exact shared transactional approval fence, authenticated invocation/executor/artifact-return APIs and target3.0.7 RPM/live acceptance remain unavailable or unverified.",
+  "nativeDeploymentState": "Files applied/hash verified; reloadAndResume accepted, terminal result unobserved. Actual Gateway RPC probe unknown method; runtime registration NOT accepted. Config/auth/core unchanged.",
+  "governingPlan": "../LANDING-PLAN.md v3",
+  "historicalPathNames": "server37/, SERVER37-*.json, server37_* test names and 0037 migration IDs are retained historical/internal identifiers, not version3.7 product targets.",
+  "currentAcceptance": "DEVELOPMENT_CHECKPOINT_NOT_FROZEN; G1 Data authority and Carver-owned supported host provenance interfaces unresolved under plan v3; fixtures not production acceptance."
+}

@@ -1,0 +1,116 @@
+{
+  "id": "omatic-governance",
+  "name": "o-MATIC Server Connection",
+  "description": "Existing connection guards, diagnostics, and authenticated RPC receipt lookup. Production execution/authority/artifact bindings remain fail-closed until available.",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "toolNames",
+      "connections"
+    ],
+    "properties": {
+      "toolNames": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": {
+          "type": "string",
+          "enum": [
+            "startup",
+            "connections_list",
+            "omatic_guide",
+            "search",
+            "factory_query",
+            "factory_owner_ddl",
+            "work_claim_acquire",
+            "work_claim_release",
+            "kernel_session_open",
+            "kernel_session_get",
+            "kernel_plan_update",
+            "kernel_delegate",
+            "kernel_return",
+            "kernel_session_close",
+            "workflow_status",
+            "workflow_mutation_status",
+            "module_status",
+            "observability_snapshot",
+            "embed_query",
+            "mom_summary",
+            "mom_network_inventory",
+            "mom_trends",
+            "mom_compliance_posture",
+            "db_health_snapshot",
+            "factory_web_status",
+            "ladder_status",
+            "proposal_vault_list",
+            "proposal_vault_get",
+            "proposal_vault_trash_list",
+            "slate_canvas_open",
+            "slate_asset_get",
+            "slate_entity_search",
+            "slate_entity_verify",
+            "slate_proposal_list",
+            "slate_scene_observe",
+            "task_duplicate_check",
+            "task_relationships",
+            "ocr_result_get",
+            "vision_page_get"
+          ]
+        }
+      },
+      "connections": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "agentFactoryMap": {
+        "type": "object",
+        "description": "Explicit factory enrollment for zero-tool answer checks; no model changes or agent spawning.",
+        "additionalProperties": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "agentIds": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "description": "Bound an approved pilot to named existing agents; omitted means all agents using selected connections.",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "receiptStatusTool": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "description": "Exact existing registered MCP workflow-status tool. Optional; absent leaves authenticated workflow reads blocked. No endpoint or credential."
+      },
+      "receiptStartupTool": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "description": "Exact existing registered MCP startup tool paired with receiptStatusTool. Optional; both must be configured. No endpoint or credential."
+      }
+    }
+  },
+  "contracts": {
+    "gatewayMethodDispatch": [
+      "authenticated-request"
+    ],
+    "tools": [
+      "omatic_connection_status",
+      "omatic_workflow_status"
+    ]
+  }
+}

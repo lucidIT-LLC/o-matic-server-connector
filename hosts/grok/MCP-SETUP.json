@@ -1,0 +1,13 @@
+{
+  "host": "grok",
+  "status": "NOT_APPROVED",
+  "mcpUrl": "https://factory.o-matic.ai/mcp",
+  "urlSource": "existing Copilot connector manifest remoteMcpServer.mcpServerUrl",
+  "clientEnforcement": false,
+  "universalHarness": false,
+  "limits": [
+    "No local plugin, hook, or proof cache is included.",
+    "A turn that never calls the Server is not governed.",
+    "Server authentication remains the Server's own check."
+  ]
+}

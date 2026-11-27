@@ -1,0 +1,57 @@
+{
+  "name": "omatic-governance",
+  "version": "1.0.1-candidate.4",
+  "private": true,
+  "type": "module",
+  "description": "o-MATIC Server Connection: stock-host guards and explicit connection status; unbound workflow capabilities remain blocked.",
+  "scripts": {
+    "test": "node --test index.test.mjs peer-memory.test.mjs receipt-contract.test.mjs server-contract.test.mjs shared-host-adapter.test.mjs",
+    "build": "bun build ./release-entry.mjs --target=node --external=openclaw/plugin-sdk/gateway-method-runtime --outfile=./dist-runtime/index.js",
+    "release:build": "python3 -B build_release.py",
+    "test:extended": "node --test authenticated-request-adapter.test.mjs native-loop-repair/repair.test.mjs"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist-runtime/index.js"
+    ]
+  },
+  "files": [
+    "CAPABILITIES.json",
+    "LICENSE.md",
+    "README.md",
+    "SECURITY.md",
+    "authenticated-request-adapter.mjs",
+    "codex-adapter.mjs",
+    "codex-preflight.py",
+    "dist-runtime/index.js",
+    "docs/PRODUCT-CONTRACT.md",
+    "hosts/",
+    "index.mjs",
+    "m365-adapter.mjs",
+    "openclaw.plugin.json",
+    "peer-memory.mjs",
+    "receipt-contract.mjs",
+    "release-entry.mjs",
+    "server-contract.mjs",
+    "shared-host-adapter.mjs",
+    "sql-classify.mjs",
+    "status-tool.mjs",
+    "workflow.mjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucidIT-LLC/o-matic-server-connector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucidIT-LLC/o-matic-server-connector/issues"
+  },
+  "homepage": "https://github.com/lucidIT-LLC/o-matic-server-connector#readme",
+  "license": "BUSL-1.1",
+  "keywords": [
+    "o-matic",
+    "mcp",
+    "openclaw",
+    "governance",
+    "connector"
+  ]
+}

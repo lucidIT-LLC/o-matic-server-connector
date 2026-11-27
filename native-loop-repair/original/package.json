@@ -1,0 +1,11 @@
+{
+  "name": "omatic-governance",
+  "version": "1.0.1-candidate.4",
+  "private": true,
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./index.mjs"
+    ]
+  }
+}

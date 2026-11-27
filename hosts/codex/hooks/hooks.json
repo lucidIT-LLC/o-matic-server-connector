@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(?:mcp__codex_apps__o_matic_server_mcp_factory_query|mcp__codex_apps__o_matic_server_mcp_search|mcp__codex_apps__o_matic_server_mcp_startup|mcp__o_MATIC_Server__factory_query|mcp__o_MATIC_Server__search|mcp__o_MATIC_Server__startup)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/preflight.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

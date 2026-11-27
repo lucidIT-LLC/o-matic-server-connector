@@ -1,0 +1,8 @@
+{
+  "mcp__o_MATIC_Server__startup": "startup",
+  "mcp__o_MATIC_Server__search": "search",
+  "mcp__o_MATIC_Server__factory_query": "factory_query",
+  "mcp__codex_apps__o_matic_server_mcp_startup": "startup",
+  "mcp__codex_apps__o_matic_server_mcp_search": "search",
+  "mcp__codex_apps__o_matic_server_mcp_factory_query": "factory_query"
+}

@@ -1,0 +1,8 @@
+{
+  "state": "DEVELOPMENT_NOT_ACCEPTED_OR_APPLIED",
+  "source": "proposed/index.mjs",
+  "sourceSha256": "02ed11cbe3c939baf672ec7a59141f8889fb8c18f638faf1d7b2996e7cf89f0a",
+  "historicalReview": "REVIEW.json",
+  "historicalReviewValidity": "Historical narrow source hash/approval is not current source acceptance. Original rollback bytes unchanged.",
+  "delta": "Explicit workflow_status/mutation_status read scopes, own proof required, factory lookup field; no argument rewrites or workflow mutation dispatch."
+}

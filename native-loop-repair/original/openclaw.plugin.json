@@ -1,0 +1,32 @@
+{
+  "id": "omatic-governance",
+  "name": "o-MATIC governance",
+  "description": "Carry bounded workflow context to a configured o-MATIC MCP connection",
+  "activation": {"onStartup": true},
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["toolNames", "connections"],
+    "properties": {
+      "toolNames": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": {
+          "type": "string",
+          "enum": ["startup", "connections_list", "omatic_guide", "search", "factory_query", "factory_owner_ddl", "work_claim_acquire", "work_claim_release", "kernel_session_open", "kernel_session_get", "kernel_plan_update", "kernel_delegate", "kernel_return", "kernel_session_close"]
+        }
+      },
+      "connections": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+      "agentFactoryMap": {
+        "type": "object",
+        "description": "Explicit factory enrollment for zero-tool answer checks; no model changes or agent spawning.",
+        "additionalProperties": {"type": "string", "minLength": 1}
+      },
+      "agentIds": {
+        "type": "array", "minItems": 1, "uniqueItems": true,
+        "description": "Bound an approved pilot to named existing agents; omitted means all agents using selected connections.",
+        "items": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

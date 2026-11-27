@@ -1,0 +1,17 @@
+{
+  "state": "REVIEW_ONLY_NOT_APPLIED",
+  "target": "/Users/lucid/.openclaw/extensions/omatic-governance/index.mjs",
+  "expectedOriginalSha256": "19027f27a08b66c854b07367b2d27af0f11891bca4cd3498fa572debc1e3843b",
+  "proposedSha256": "a6262a15947a71c1914bbd20aae48ce2e4a636c46fce1814ee94dbc7d30114e0",
+  "installChanges": [
+    "one plugin source file; no plugin ID/version/config/auth/core changes"
+  ],
+  "restoration": {
+    "original": "original/index.mjs",
+    "onlyRestoreWhenCurrentSha256": "a6262a15947a71c1914bbd20aae48ce2e4a636c46fce1814ee94dbc7d30114e0",
+    "expectedRestoredSha256": "19027f27a08b66c854b07367b2d27af0f11891bca4cd3498fa572debc1e3843b"
+  },
+  "loadGate": "Exact operator approval of replacement and stock plugin reload required; do not execute from this packet.",
+  "scopeLimit": "Surgical native-argument and generic-finalize-loop repair, not the full portable completion backend. Known tool reads still require observed READY and exact own proof. No claim of universal narrative enforcement.",
+  "disposition": "Historical minimal source repair; current full compiled plugin activation is separately described by release/LATEST.json and RELEASE-ACTIVATION.json. Not applied."
+}

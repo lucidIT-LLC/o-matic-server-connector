@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+*.log
+.test-toolchain/
+build-workspaces/
+release/work/
+release/artifacts/
+dist/
+dist-current/
+.env
+.env.*
+*.pem
+*.key
+credentials*

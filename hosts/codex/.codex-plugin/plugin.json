@@ -1,0 +1,5 @@
+{
+  "name": "omatic-governance",
+  "version": "1.0.1-candidate.6",
+  "hooks": "./hooks/hooks.json"
+}
