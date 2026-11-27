@@ -110,7 +110,14 @@ export async function materializeCrossHost(outDir, { copilotZip }) {
     doctrine: identity.doctrine,
     packages: {
       openclaw: { ...shared, agentDocStandard: "openclaw", artifact: "native openclaw.plugin.json + dist-runtime" },
-      hermes: { ...shared, agentDocStandard: "hermes", artifact: "hosts/hermes context-file projection" },
+      hermes: {
+        ...shared,
+        agentDocStandard: "hermes",
+        artifact: "hosts/hermes context-file projection",
+        acceptance: "packaging_declared",
+        liveAcceptance: "pending",
+        of90: "closed_as_packaging_declared",
+      },
       cursor: { ...shared, agentDocStandard: "cursor", artifact: "hosts/cursor hooks + agent/skill projection" },
       copilot: {
         ...shared,
@@ -119,6 +126,9 @@ export async function materializeCrossHost(outDir, { copilotZip }) {
         artifact: "omatic-server-0.1.7-mcp.zip",
         authorization: "existing OAuthPluginVault reference preserved; not rewritten",
         declarativeAgentRequired: false,
+        acceptance: "packaging_declared",
+        liveAcceptance: "pending",
+        of90: "closed_as_packaging_declared",
       },
       codex: { ...shared, version: codexVersion, coverage: codex.coverage },
       grok: { ...shared, clientEnforcement: false },

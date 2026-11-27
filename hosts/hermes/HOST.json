@@ -25,6 +25,12 @@
     "mcp": "reuse host MCP entry for o-MATIC Server (default https://factory.o-matic.ai/mcp)",
     "note": "Hermes is a required agent-doc host for this connector. Project the same gold agents/skills; do not invent a Hermes-only personality."
   },
-  "acceptance": "pending",
-  "clientEnforcement": "none"
+  "acceptance": "packaging_declared",
+  "clientEnforcement": "none",
+  "of90Closeout": {
+    "status": "packaging_declared",
+    "liveAcceptance": "pending",
+    "filledGoldPacksInRepo": false,
+    "note": "OF-90 closes packaging identity + agent-doc standard declaration only."
+  }
 }

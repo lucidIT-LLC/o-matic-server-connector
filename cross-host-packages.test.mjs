@@ -26,6 +26,9 @@ test("cross-host packages materialize one plugin with required agent-doc hosts",
   assert.equal(manifest.packages.cursor.pluginId, PLUGIN_ID);
   assert.equal(manifest.packages.hermes.agentDocStandard, "hermes");
   assert.equal(manifest.packages.copilot.declarativeAgentRequired, false);
+  assert.equal(manifest.packages.copilot.acceptance, "packaging_declared");
+  assert.equal(manifest.packages.hermes.acceptance, "packaging_declared");
+  assert.equal(manifest.packages.copilot.liveAcceptance, "pending");
   assert.equal(manifest.packages.grok.clientEnforcement, false);
   const identity = JSON.parse(await readFile(path.join(out, "PLUGIN-IDENTITY.json"), "utf8"));
   assert.deepEqual(identity.requiredHostAgentDocStandards, ["openclaw", "hermes", "m365-copilot", "cursor"]);

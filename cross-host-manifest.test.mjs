@@ -16,9 +16,13 @@ test("cross-host manifest names every required host and one plugin projects agen
     ["codex", "cursor", "grok", "hermes", "m365-copilot", "openclaw"],
   );
   assert.equal(manifest.hosts.hermes.agentDocStandard, "hermes");
+  assert.equal(manifest.hosts.hermes.acceptance, "packaging_declared");
   assert.equal(manifest.hosts.cursor.agentDocStandard, "cursor");
   assert.equal(manifest.hosts["m365-copilot"].agentDocStandard, "m365-copilot");
+  assert.equal(manifest.hosts["m365-copilot"].acceptance, "packaging_declared");
   assert.equal(manifest.hosts.openclaw.agentDocStandard, "openclaw");
+  // workflow hostContracts.acceptance remains pending = live host acceptance, not packaging declaration
+  assert.equal(hostContracts["m365-copilot"].acceptance, "pending");
   assert.equal(manifest.hosts.grok.localAdapter, false);
   assert.equal(manifest.hosts.grok.component, null);
   assert.match(manifest.wholeProductIsNot, /host projections of the same plugin/);

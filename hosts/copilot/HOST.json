@@ -20,6 +20,12 @@
     "declarativeAgentRequired": false,
     "agentsSkills": "SKILL.md / on-the-fly packages from gold (decision #304: prefer Agent Skills over .agent.md forks)"
   },
-  "acceptance": "pending",
-  "install": "M365 admin center Agents \u2192 Tools \u2192 Registry \u2192 Upload (operator step)"
+  "acceptance": "packaging_declared",
+  "install": "M365 admin center Agents \u2192 Tools \u2192 Registry \u2192 Upload (operator step)",
+  "of90Closeout": {
+    "status": "packaging_declared",
+    "liveAcceptance": "pending",
+    "filledGoldPacksInRepo": false,
+    "note": "OF-90 closes packaging identity + agent-doc standard declaration only."
+  }
 }

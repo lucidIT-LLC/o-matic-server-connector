@@ -37,9 +37,9 @@ One product, host-specific packaging (see `docs/PRODUCT-CONTRACT.md`, `hosts/PLU
 | Host | Artifact | Agent-doc standard | Status |
 |---|---|---|---|
 | **OpenClaw** | Root package (`openclaw.plugin.json`, `dist-runtime/index.js`, …) | `AGENTS.md` / `SOUL.md` / `IDENTITY.md` / `USER.md` | Native install/reload verified on Jimmy’s Mac at candidate.4 (doctor may warn on archive provenance) |
-| **Hermes** | `hosts/hermes/` | `AGENTS.md` / `HERMES.md` / `SOUL.md` from gold | Projection declared; host acceptance pending |
+| **Hermes** | `hosts/hermes/` | `AGENTS.md` / `HERMES.md` / `SOUL.md` from gold | **OF-90 packaging declared**; live packs + Hermes smoke pending (`hosts/hermes/ACCEPTANCE.md`) |
 | **Cursor** | `hosts/cursor/` (hooks + agent/skill projection) | Cursor agents + `SKILL.md` + method cards | Mac hooks load + MCP `startup` READY measured; Desktop `beforeMCPExecution` on Project-agent MCP path not intercepted |
-| **Microsoft 365 Copilot** | `hosts/copilot/` zip + SKILL/agent projection | Agent Skills / declarative packages from gold | **Same plugin** — not a Copilot fork; tenant admin-center acceptance pending |
+| **Microsoft 365 Copilot** | `hosts/copilot/` zip + SKILL/agent projection | Agent Skills / declarative packages from gold | **Same plugin**; **OF-90 packaging declared**; tenant upload + gold packs pending (`hosts/copilot/ACCEPTANCE.md`) |
 | **Codex / ChatGPT** | `hosts/codex/` | plugin + agent projection | Candidate packaging; native hook trust / live refusal pending |
 | **Grok** | `hosts/grok/MCP-SETUP.json` | MCP + Bot/paste from gold | MCP URL; `clientEnforcement: false` |
 
