@@ -1,0 +1,30 @@
+{
+  "host": "hermes",
+  "pluginId": "omatic-governance",
+  "candidateVersion": "1.0.1-candidate.4",
+  "samePluginAs": [
+    "openclaw",
+    "cursor",
+    "m365-copilot",
+    "codex",
+    "grok"
+  ],
+  "agentsIncluded": true,
+  "skillsIncluded": true,
+  "agentDocStandard": "hermes",
+  "package": {
+    "kind": "context-file-projection",
+    "projectFiles": [
+      "AGENTS.md",
+      "HERMES.md",
+      ".hermes.md"
+    ],
+    "instanceFiles": [
+      "SOUL.md"
+    ],
+    "mcp": "reuse host MCP entry for o-MATIC Server (default https://factory.o-matic.ai/mcp)",
+    "note": "Hermes is a required agent-doc host for this connector. Project the same gold agents/skills; do not invent a Hermes-only personality."
+  },
+  "acceptance": "pending",
+  "clientEnforcement": "none"
+}

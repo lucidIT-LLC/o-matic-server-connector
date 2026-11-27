@@ -1,7 +1,7 @@
 {
   "product": "o-MATIC Server Connection",
   "pluginId": "omatic-governance",
-  "scope": "Stock OpenClaw native external plugin; existing connection and existing full agents only",
+  "scope": "One multi-platform connector plugin (omatic-governance): MCP connection, host projections, and agents/skills projected from DB gold into OpenClaw/Hermes/Copilot/Cursor agent-doc standards — not host-unique forks",
   "implemented": [
     "legacy known-read guard compatibility",
     "explicit startup key/proof validation without native rewrites",
@@ -32,8 +32,11 @@
     "automatic MCP catalog repair"
   ],
   "platforms": {
-    "OpenClawCodex": "local compiled-entry/guard checks; actual activation/native smoke and workflow acceptance pending",
-    "Microsoft365Copilot": "RemoteMCPServer manifest preparation and contract checks only; actual tenant/schema/Entra/acquired-worker and workflow acceptance pending"
+    "OpenClaw": "native plugin + workspace agent-doc projection from gold; Mac install/reload measured at candidate.4",
+    "Hermes": "context-file agent-doc projection from gold declared; host acceptance pending",
+    "Cursor": "hooks + MCP + agent/skill projection from gold; Mac hooks load + startup READY measured",
+    "Microsoft365Copilot": "same plugin id; RemoteMCPServer zip + SKILL/agent projection from gold; tenant acceptance pending",
+    "Codex": "local compiled-entry/guard checks; actual activation/native smoke and workflow acceptance pending"
   },
   "automaticEffects": {
     "authChanges": false,

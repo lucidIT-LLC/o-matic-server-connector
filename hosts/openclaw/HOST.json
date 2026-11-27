@@ -1,0 +1,28 @@
+{
+  "host": "openclaw",
+  "pluginId": "omatic-governance",
+  "candidateVersion": "1.0.1-candidate.4",
+  "samePluginAs": [
+    "hermes",
+    "cursor",
+    "m365-copilot",
+    "codex",
+    "grok"
+  ],
+  "agentsIncluded": true,
+  "skillsIncluded": true,
+  "agentDocStandard": "openclaw",
+  "package": {
+    "kind": "native-plugin",
+    "manifest": "openclaw.plugin.json (repo root)",
+    "runtime": "dist-runtime/index.js",
+    "workspaceDocs": [
+      "AGENTS.md",
+      "SOUL.md",
+      "IDENTITY.md",
+      "USER.md"
+    ],
+    "note": "Native OpenClaw install of this same plugin. Workspace agent docs are gold projections, not a second product."
+  },
+  "acceptance": "pending"
+}

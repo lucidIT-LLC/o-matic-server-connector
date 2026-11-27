@@ -14,11 +14,23 @@ export function decideWorkflow({ readiness, surface, receiptCapability = false }
 }
 
 export const hostContracts = Object.freeze({
+  openclaw: Object.freeze({ acceptance: "pending", connection: "existing host-managed MCP connection",
+    pluginId: "omatic-governance", agentDocStandard: "openclaw", agentsFromGold: true,
+    argumentMode: "explicit-server-tools", universalFinalBlock: false }),
+  hermes: Object.freeze({ acceptance: "pending", connection: "existing host-managed MCP connection",
+    pluginId: "omatic-governance", agentDocStandard: "hermes", agentsFromGold: true,
+    localAdapter: false, argumentMode: "server-request", universalFinalBlock: false }),
+  cursor: Object.freeze({ acceptance: "pending", connection: "existing host-managed MCP connection",
+    pluginId: "omatic-governance", agentDocStandard: "cursor", agentsFromGold: true,
+    argumentMode: "explicit-before-approval", universalFinalBlock: false }),
   codex: Object.freeze({ acceptance: "pending", connection: "existing host-managed MCP connection",
+    pluginId: "omatic-governance", agentsFromGold: true,
     argumentMode: "explicit-before-approval", universalFinalBlock: false }),
   "m365-copilot": Object.freeze({ acceptance: "pending", connection: "RemoteMCPServer with existing Entra connection",
+    pluginId: "omatic-governance", agentDocStandard: "m365-copilot", agentsFromGold: true,
     coordination: "worker_agents referencing acquired registered title IDs; IDs not supplied",
     argumentMode: "explicit-server-tools", universalFinalBlock: false }),
   grok: Object.freeze({ acceptance: "pending", connection: "remote MCP URL only",
+    pluginId: "omatic-governance", agentsFromGold: true,
     localAdapter: false, argumentMode: "server-request", universalFinalBlock: false }),
 });

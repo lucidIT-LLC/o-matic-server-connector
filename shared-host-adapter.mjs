@@ -1,4 +1,4 @@
-import { hostCanIntercept } from "./server-contract.mjs";
+import { hostCanIntercept, hostEnforcement } from "./server-contract.mjs";
 
 const proofShape = /^v1\.\d{1,12}\.[a-f0-9]{32}\.[a-f0-9]{64}$/;
 const proofText = /v1\.\d{1,12}\.[a-f0-9]{32}\.[a-f0-9]{64}/g;
@@ -14,7 +14,7 @@ export const orchestrationGate = Object.freeze({
 });
 
 function knownHost(host) {
-  return hostCanIntercept(host) || host === "grok" || host === "m365-copilot";
+  return Object.hasOwn(hostEnforcement, host);
 }
 
 function outboundSearch(args) {

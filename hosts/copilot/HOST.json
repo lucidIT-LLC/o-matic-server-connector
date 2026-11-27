@@ -1,0 +1,25 @@
+{
+  "host": "m365-copilot",
+  "pluginId": "omatic-governance",
+  "candidateVersion": "1.0.1-candidate.4",
+  "samePluginAs": [
+    "cursor",
+    "openclaw",
+    "hermes",
+    "codex",
+    "grok"
+  ],
+  "agentsIncluded": true,
+  "skillsIncluded": true,
+  "agentDocStandard": "m365-copilot",
+  "package": {
+    "kind": "m365-agent-connector-zip",
+    "artifact": "omatic-server-0.1.7-mcp.zip",
+    "artifactNote": "FCC packaging build label 0.1.7 is a host projection of this same connector plugin \u2014 not a separate Copilot fork or Supply-only product. Agents/skills still project from DB gold.",
+    "authorization": "existing OAuthPluginVault reference preserved; not rewritten",
+    "declarativeAgentRequired": false,
+    "agentsSkills": "SKILL.md / on-the-fly packages from gold (decision #304: prefer Agent Skills over .agent.md forks)"
+  },
+  "acceptance": "pending",
+  "install": "M365 admin center Agents \u2192 Tools \u2192 Registry \u2192 Upload (operator step)"
+}

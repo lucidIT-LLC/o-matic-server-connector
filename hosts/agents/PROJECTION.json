@@ -1,0 +1,48 @@
+{
+  "pluginId": "omatic-governance",
+  "agentsIncluded": true,
+  "skillsIncluded": true,
+  "dispatch": false,
+  "doctrine": {
+    "aiIsAi": true,
+    "goldInDb": true,
+    "projectEverywhere": true,
+    "noHostUniqueForks": true
+  },
+  "goldSource": "factory.persona* / persona_version (+ skill gold)",
+  "docStandards": "DOC-STANDARDS.json",
+  "hosts": {
+    "openclaw": {
+      "agentDocStandard": "openclaw",
+      "emission": "workspace AGENTS.md / SOUL.md / IDENTITY.md / USER.md (+ optional BOOTSTRAP.md / MEMORY.md) projected from gold; enroll via plugin agentIds / connections"
+    },
+    "hermes": {
+      "agentDocStandard": "hermes",
+      "emission": "AGENTS.md / HERMES.md / SOUL.md projected from the same gold; not a Hermes-only fork"
+    },
+    "cursor": {
+      "agentDocStandard": "cursor",
+      "samePluginAs": [
+        "m365-copilot",
+        "openclaw",
+        "hermes"
+      ],
+      "emission": "roster agents + SKILL.md + method cards projected from gold into this connector install path"
+    },
+    "m365-copilot": {
+      "agentDocStandard": "m365-copilot",
+      "samePluginAs": [
+        "cursor",
+        "openclaw",
+        "hermes"
+      ],
+      "emission": "SKILL.md / declarative packages / on-the-fly host packages from gold; not a separate Copilot fork"
+    },
+    "codex": {
+      "emission": "host plugin + agent projections from gold; native trust pending"
+    },
+    "grok": {
+      "emission": "MCP connection + paste/Bot projections from gold; no local hooks/memory twin"
+    }
+  }
+}
