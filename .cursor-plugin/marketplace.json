@@ -1,0 +1,20 @@
+{
+  "name": "o-matic-server-connector",
+  "owner": {
+    "name": "LucidIT, LLC"
+  },
+  "metadata": {
+    "description": "o-MATIC Server Connection plus the core crew. One install configures the existing o-MATIC Server MCP connection (cloud default, or an operator-entered on-prem URL) and loads Probot, Fred, and Data. It does not create a Server, dispatch agents, or change authentication.",
+    "version": "1.1.0"
+  },
+  "plugins": [
+    {
+      "name": "omatic-server-connection",
+      "source": "./hosts/cursor/bundled",
+      "description": "o-MATIC Server Connection plus the core crew. One install configures the existing o-MATIC Server MCP connection (cloud default, or an operator-entered on-prem URL) and loads Probot, Fred, and Data. It does not create a Server, dispatch agents, or change authentication.",
+      "version": "1.1.0",
+      "displayName": "o-MATIC Server Connection",
+      "category": "productivity"
+    }
+  ]
+}

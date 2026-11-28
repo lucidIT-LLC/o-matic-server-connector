@@ -1,0 +1,42 @@
+{
+  "name": "omatic-server-connection",
+  "displayName": "o-MATIC Server Connection",
+  "version": "1.1.0",
+  "description": "o-MATIC Server Connection plus the core crew. One install configures the existing o-MATIC Server MCP connection (cloud default, or an operator-entered on-prem URL) and loads Probot, Fred, and Data. It does not create a Server, dispatch agents, or change authentication.",
+  "author": {
+    "name": "LucidIT, LLC",
+    "url": "https://o-matic.ai"
+  },
+  "homepage": "https://o-matic.ai",
+  "repository": "https://github.com/lucidIT-LLC/o-matic-server-connector",
+  "license": "BUSL-1.1",
+  "keywords": [
+    "o-matic",
+    "mcp",
+    "factory",
+    "probot",
+    "fred",
+    "data"
+  ],
+  "skills": "./skills/",
+  "agents": [
+    "./agents/probot.md",
+    "./agents/fred.md",
+    "./agents/data.md"
+  ],
+  "privacyPolicyUrl": "https://www.o-matic.ai/privacy-policy/",
+  "userConfig": {
+    "server_url": {
+      "type": "string",
+      "title": "o-MATIC Server URL",
+      "description": "Cloud default: https://factory.o-matic.ai/mcp. For on-premises, enter the HTTPS MCP URL for that Server.",
+      "default": "https://factory.o-matic.ai/mcp"
+    }
+  },
+  "mcpServers": {
+    "o-matic-server": {
+      "type": "http",
+      "url": "${user_config.server_url}"
+    }
+  }
+}

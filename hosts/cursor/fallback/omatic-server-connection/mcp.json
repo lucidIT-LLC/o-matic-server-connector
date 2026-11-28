@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "omatic-server": {
+      "url": "${SERVER_URL}"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "omatic-core-crew",
+  "displayName": "o-MATIC Core Crew",
+  "version": "1.1.0",
+  "description": "o-MATIC core crew: Probot, Fred, and Data, generated from the gold record. Depends on the o-MATIC Server Connection plugin for the Server MCP connection. Ships no MCP server of its own.",
+  "author": {
+    "name": "LucidIT, LLC",
+    "url": "https://o-matic.ai"
+  },
+  "homepage": "https://o-matic.ai",
+  "repository": "https://github.com/lucidIT-LLC/o-matic-server-connector",
+  "license": "BUSL-1.1",
+  "keywords": [
+    "o-matic",
+    "mcp",
+    "factory",
+    "probot",
+    "fred",
+    "data"
+  ],
+  "skills": "./skills/",
+  "agents": [
+    "./agents/probot.md",
+    "./agents/fred.md",
+    "./agents/data.md"
+  ],
+  "dependencies": [
+    "omatic-server-connection"
+  ]
+}

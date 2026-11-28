@@ -1,0 +1,170 @@
+{
+  "product": "o-MATIC Server Connection",
+  "version": "1.1.0",
+  "status": "draft",
+  "released": false,
+  "marketplace": "bundled",
+  "layouts": {
+    "bundled": "One plugin per host: MCP connection plus Probot, Fred, and Data.",
+    "fallback": "Two plugins per host: the connection plugin declares MCP, and the crew plugin depends on it. Switch the published marketplace with --marketplace fallback if a hosted Claude host skips MCP-declaring plugins."
+  },
+  "hosts": [
+    "claude",
+    "cursor"
+  ],
+  "agents": [
+    "probot",
+    "fred",
+    "data"
+  ],
+  "skills": [
+    "probot-orchestrator",
+    "fred-storage",
+    "data-analyst"
+  ],
+  "gold": {
+    "schema": "omatic-core-crew-gold-public-v1",
+    "extracted_from": {
+      "repository": "lucidIT-LLC/o-matic-server",
+      "path": "tools/roster_gold.json",
+      "exported_at": "2026-09-28T18:36:42.865379-04:00",
+      "note": "Public-safe extract only. Catalog embeddings, tool inventories, evaluation criteria, provenance, assets, and runtime-contract deployment evidence were omitted. This snapshot is dated 2026-09-28 and is older than the Agency 1.12.6 skill files shipped beside it; skill files are the canonical role text, and this file supplies public identity metadata."
+    },
+    "identity_signatures": {
+      "probot": "978ed5a5b2c9deab1b4d070096222da2",
+      "fred": "2c906db5b2df11acbc6fcc0855a27190",
+      "data": "c8fb48ecc1d327e966d0bd7b39b76be7"
+    }
+  },
+  "skill_headers": {
+    "probot": {
+      "skill": "probot-orchestrator",
+      "sha256": "99fe4b6a026450816b9ab29cee6746fd7bb5c6f5cedaa6541bc4f81c42bcf7c7",
+      "headers": [
+        "<!-- version: 20.0.2 | author: LucidIT, LLC | package: o-MATIC Agency -->",
+        "<!-- persona source: o-MATIC persona_version 65 (draft v2); identity_signature: 631af1bd2a173b5cf238c2f466e7d9e6 -->"
+      ]
+    },
+    "fred": {
+      "skill": "fred-storage",
+      "sha256": "a25fe1ba884e9cfa6a7a0328a6115832915b75174300a22fdca34d6a449d01f4",
+      "headers": [
+        "<!-- version: 15.0.1 | author: LucidIT, LLC | package: o-MATIC Agency -->",
+        "<!-- persona source: o-MATIC persona_version 66 (draft v3); identity_signature: 741993bc2c60fa16f53dbeaed5680e67 -->"
+      ]
+    },
+    "data": {
+      "skill": "data-analyst",
+      "sha256": "c5756a9b138045e14e130ef9c1b10e4a6e7ca6c57db19352eff24878cef81066",
+      "headers": [
+        "<!-- version: 10.0.1 | author: LucidIT, LLC | package: o-MATIC Agency -->",
+        "<!-- persona source: o-MATIC persona_version 67 (draft v2); identity_signature: 379194603eb19974b8c1ceed62f1f744 -->"
+      ]
+    }
+  },
+  "mcp": {
+    "defaultUrl": "https://factory.o-matic.ai/mcp",
+    "claudeServerName": "o-matic-server",
+    "cursorServerName": "omatic-server"
+  },
+  "files": {
+    "hosts/claude/bundled/omatic-server-connection/.claude-plugin/plugin.json": "e081d09040e04bd93df426b821602769b588df7aaf4dada03e8a9eb1622ceac0",
+    "hosts/claude/bundled/omatic-server-connection/agents/data.md": "21940bbd42e753f78b503c28a009cce1152d3f765c9167aadc6d9013f11098c2",
+    "hosts/claude/bundled/omatic-server-connection/agents/fred.md": "37e218239a18a1015f9774c1c0a40bb6fec132eba7bfc06bf2c2bdf3ef282981",
+    "hosts/claude/bundled/omatic-server-connection/agents/probot.md": "cb4bd2a17175c35a43cebce8e9f20f8dae7776a5a9c60c399090bab2592dc874",
+    "hosts/claude/bundled/omatic-server-connection/skills/data-analyst/SKILL.md": "c5756a9b138045e14e130ef9c1b10e4a6e7ca6c57db19352eff24878cef81066",
+    "hosts/claude/bundled/omatic-server-connection/skills/data-analyst/reference/dba-operations.md": "babec75d2f00e336cba5f9ff3cf739d02f2ff6a2236680eee61abb09573343db",
+    "hosts/claude/bundled/omatic-server-connection/skills/data-analyst/reference/retrieval-disclosure.md": "c4b54771263dd07943fb5c355ecd29525e18d0b86c512960b548db4b8885c188",
+    "hosts/claude/bundled/omatic-server-connection/skills/data-analyst/reference/vector-search.md": "bf3496f0e610c047a3fb67f20e09ecd96762e0fcf4bc6065329343c45260e106",
+    "hosts/claude/bundled/omatic-server-connection/skills/fred-storage/SKILL.md": "a25fe1ba884e9cfa6a7a0328a6115832915b75174300a22fdca34d6a449d01f4",
+    "hosts/claude/bundled/omatic-server-connection/skills/fred-storage/reference/file-vault.md": "6f6e15dee7d3de65d05c0b576284a7fd4bd4f3d2e6fd8ac5bab21d3134ef0273",
+    "hosts/claude/bundled/omatic-server-connection/skills/fred-storage/reference/read-intelligence.md": "5cf94f1547bdb1ee7aee7cbce75749a750c14af0e54d540c1453e98ebeaf1707",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/SKILL.md": "99fe4b6a026450816b9ab29cee6746fd7bb5c6f5cedaa6541bc4f81c42bcf7c7",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/anchor-commands.md": "8dcc6470f10fd817da74ddcaa3ec886a90a6056e75e9d8c057b9957d37091cb9",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/conversation-key.md": "003ac077bb729aea63adbc33b6ac09fb5ce4c3ff160883570fb7b721f3f6e026",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/factory-construction.md": "c29f89102a44f878d5bba28735e47a6e48433b099039311c5e6bc0eb8181f0bc",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/host-worker-handoff.md": "68d9cca4385aff6b7d8a63a833d882c03e95451353826a89dc40cc1baade6b5b",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/root-cause-triage.md": "7012f726b336c850f93622a41573f6986689aa831be34625aef2918942ff3743",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/routing.md": "ba2a629740f04742b4175afd221418537a49ae6de0ff4fe0f6548703266c5a39",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/sage-standalone.md": "2af437a4df3d378293e766b04aed82b06e368172306d214480da6e55cdcac38a",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/startup-card.md": "5b7ea33649c9104bff1f64a361dbf1eed36ccd3a41e1d7d3caa1bccfe0bc0b29",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/startup-protocol.md": "83c0b9766aac15e78b6f96ade77c682307af5517caadb24c6354a1c11710d099",
+    "hosts/claude/bundled/omatic-server-connection/skills/probot-orchestrator/reference/triage-method.md": "ed044f458e9bdc80d336abd7ee51b725884cbfa2c189854aad7c98f08b85c8f3",
+    "hosts/claude/fallback/omatic-server-connection/.claude-plugin/plugin.json": "52776ccc971359f29b06cbdd3b23ad8451d9f5a556f1d0b27ef8a5a5f7f55346",
+    "hosts/claude/fallback/omatic-core-crew/.claude-plugin/plugin.json": "80f1455e1b174ee5f0f4de16932e35e6c76f08240c213cbab7cc2778d0384de6",
+    "hosts/claude/fallback/omatic-core-crew/agents/data.md": "21940bbd42e753f78b503c28a009cce1152d3f765c9167aadc6d9013f11098c2",
+    "hosts/claude/fallback/omatic-core-crew/agents/fred.md": "37e218239a18a1015f9774c1c0a40bb6fec132eba7bfc06bf2c2bdf3ef282981",
+    "hosts/claude/fallback/omatic-core-crew/agents/probot.md": "cb4bd2a17175c35a43cebce8e9f20f8dae7776a5a9c60c399090bab2592dc874",
+    "hosts/claude/fallback/omatic-core-crew/skills/data-analyst/SKILL.md": "c5756a9b138045e14e130ef9c1b10e4a6e7ca6c57db19352eff24878cef81066",
+    "hosts/claude/fallback/omatic-core-crew/skills/data-analyst/reference/dba-operations.md": "babec75d2f00e336cba5f9ff3cf739d02f2ff6a2236680eee61abb09573343db",
+    "hosts/claude/fallback/omatic-core-crew/skills/data-analyst/reference/retrieval-disclosure.md": "c4b54771263dd07943fb5c355ecd29525e18d0b86c512960b548db4b8885c188",
+    "hosts/claude/fallback/omatic-core-crew/skills/data-analyst/reference/vector-search.md": "bf3496f0e610c047a3fb67f20e09ecd96762e0fcf4bc6065329343c45260e106",
+    "hosts/claude/fallback/omatic-core-crew/skills/fred-storage/SKILL.md": "a25fe1ba884e9cfa6a7a0328a6115832915b75174300a22fdca34d6a449d01f4",
+    "hosts/claude/fallback/omatic-core-crew/skills/fred-storage/reference/file-vault.md": "6f6e15dee7d3de65d05c0b576284a7fd4bd4f3d2e6fd8ac5bab21d3134ef0273",
+    "hosts/claude/fallback/omatic-core-crew/skills/fred-storage/reference/read-intelligence.md": "5cf94f1547bdb1ee7aee7cbce75749a750c14af0e54d540c1453e98ebeaf1707",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/SKILL.md": "99fe4b6a026450816b9ab29cee6746fd7bb5c6f5cedaa6541bc4f81c42bcf7c7",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/anchor-commands.md": "8dcc6470f10fd817da74ddcaa3ec886a90a6056e75e9d8c057b9957d37091cb9",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/conversation-key.md": "003ac077bb729aea63adbc33b6ac09fb5ce4c3ff160883570fb7b721f3f6e026",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/factory-construction.md": "c29f89102a44f878d5bba28735e47a6e48433b099039311c5e6bc0eb8181f0bc",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/host-worker-handoff.md": "68d9cca4385aff6b7d8a63a833d882c03e95451353826a89dc40cc1baade6b5b",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/root-cause-triage.md": "7012f726b336c850f93622a41573f6986689aa831be34625aef2918942ff3743",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/routing.md": "ba2a629740f04742b4175afd221418537a49ae6de0ff4fe0f6548703266c5a39",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/sage-standalone.md": "2af437a4df3d378293e766b04aed82b06e368172306d214480da6e55cdcac38a",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/startup-card.md": "5b7ea33649c9104bff1f64a361dbf1eed36ccd3a41e1d7d3caa1bccfe0bc0b29",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/startup-protocol.md": "83c0b9766aac15e78b6f96ade77c682307af5517caadb24c6354a1c11710d099",
+    "hosts/claude/fallback/omatic-core-crew/skills/probot-orchestrator/reference/triage-method.md": "ed044f458e9bdc80d336abd7ee51b725884cbfa2c189854aad7c98f08b85c8f3",
+    "hosts/cursor/bundled/.cursor-plugin/plugin.json": "4262e793493e8ffccb06bd45d91c997bcc982016efadc45508599ce3d0c06717",
+    "hosts/cursor/bundled/agents/data.md": "21940bbd42e753f78b503c28a009cce1152d3f765c9167aadc6d9013f11098c2",
+    "hosts/cursor/bundled/agents/fred.md": "37e218239a18a1015f9774c1c0a40bb6fec132eba7bfc06bf2c2bdf3ef282981",
+    "hosts/cursor/bundled/agents/probot.md": "cb4bd2a17175c35a43cebce8e9f20f8dae7776a5a9c60c399090bab2592dc874",
+    "hosts/cursor/bundled/hooks/hooks.json": "11d4f9a5a15960530a5a414796d72820c069903bfe4b479496052bd39dbd1afe",
+    "hosts/cursor/bundled/hooks/preflight.py": "2bf4c873fa07e0a7ace2d40384b3fbe8dfd9cc2b504af5727ab32ca6bf615895",
+    "hosts/cursor/bundled/mcp.json": "79b7ff5bb57f93e088e87445ca7b10a5dd83a09240fa275911519020748d2046",
+    "hosts/cursor/bundled/skills/data-analyst/SKILL.md": "c5756a9b138045e14e130ef9c1b10e4a6e7ca6c57db19352eff24878cef81066",
+    "hosts/cursor/bundled/skills/data-analyst/reference/dba-operations.md": "babec75d2f00e336cba5f9ff3cf739d02f2ff6a2236680eee61abb09573343db",
+    "hosts/cursor/bundled/skills/data-analyst/reference/retrieval-disclosure.md": "c4b54771263dd07943fb5c355ecd29525e18d0b86c512960b548db4b8885c188",
+    "hosts/cursor/bundled/skills/data-analyst/reference/vector-search.md": "bf3496f0e610c047a3fb67f20e09ecd96762e0fcf4bc6065329343c45260e106",
+    "hosts/cursor/bundled/skills/fred-storage/SKILL.md": "a25fe1ba884e9cfa6a7a0328a6115832915b75174300a22fdca34d6a449d01f4",
+    "hosts/cursor/bundled/skills/fred-storage/reference/file-vault.md": "6f6e15dee7d3de65d05c0b576284a7fd4bd4f3d2e6fd8ac5bab21d3134ef0273",
+    "hosts/cursor/bundled/skills/fred-storage/reference/read-intelligence.md": "5cf94f1547bdb1ee7aee7cbce75749a750c14af0e54d540c1453e98ebeaf1707",
+    "hosts/cursor/bundled/skills/probot-orchestrator/SKILL.md": "99fe4b6a026450816b9ab29cee6746fd7bb5c6f5cedaa6541bc4f81c42bcf7c7",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/anchor-commands.md": "8dcc6470f10fd817da74ddcaa3ec886a90a6056e75e9d8c057b9957d37091cb9",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/conversation-key.md": "003ac077bb729aea63adbc33b6ac09fb5ce4c3ff160883570fb7b721f3f6e026",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/factory-construction.md": "c29f89102a44f878d5bba28735e47a6e48433b099039311c5e6bc0eb8181f0bc",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/host-worker-handoff.md": "68d9cca4385aff6b7d8a63a833d882c03e95451353826a89dc40cc1baade6b5b",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/root-cause-triage.md": "7012f726b336c850f93622a41573f6986689aa831be34625aef2918942ff3743",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/routing.md": "ba2a629740f04742b4175afd221418537a49ae6de0ff4fe0f6548703266c5a39",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/sage-standalone.md": "2af437a4df3d378293e766b04aed82b06e368172306d214480da6e55cdcac38a",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/startup-card.md": "5b7ea33649c9104bff1f64a361dbf1eed36ccd3a41e1d7d3caa1bccfe0bc0b29",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/startup-protocol.md": "83c0b9766aac15e78b6f96ade77c682307af5517caadb24c6354a1c11710d099",
+    "hosts/cursor/bundled/skills/probot-orchestrator/reference/triage-method.md": "ed044f458e9bdc80d336abd7ee51b725884cbfa2c189854aad7c98f08b85c8f3",
+    "hosts/cursor/fallback/omatic-server-connection/.cursor-plugin/plugin.json": "18631cafa8c7e080c22b8514000596b37458d9b358a652cab48ac3e112fdc830",
+    "hosts/cursor/fallback/omatic-server-connection/hooks/hooks.json": "11d4f9a5a15960530a5a414796d72820c069903bfe4b479496052bd39dbd1afe",
+    "hosts/cursor/fallback/omatic-server-connection/hooks/preflight.py": "2bf4c873fa07e0a7ace2d40384b3fbe8dfd9cc2b504af5727ab32ca6bf615895",
+    "hosts/cursor/fallback/omatic-server-connection/mcp.json": "79b7ff5bb57f93e088e87445ca7b10a5dd83a09240fa275911519020748d2046",
+    "hosts/cursor/fallback/omatic-core-crew/.cursor-plugin/plugin.json": "07e5f57ef4982bf8ac5f127531208128cf2d49b334811e04e36ba939f446a94c",
+    "hosts/cursor/fallback/omatic-core-crew/agents/data.md": "21940bbd42e753f78b503c28a009cce1152d3f765c9167aadc6d9013f11098c2",
+    "hosts/cursor/fallback/omatic-core-crew/agents/fred.md": "37e218239a18a1015f9774c1c0a40bb6fec132eba7bfc06bf2c2bdf3ef282981",
+    "hosts/cursor/fallback/omatic-core-crew/agents/probot.md": "cb4bd2a17175c35a43cebce8e9f20f8dae7776a5a9c60c399090bab2592dc874",
+    "hosts/cursor/fallback/omatic-core-crew/skills/data-analyst/SKILL.md": "c5756a9b138045e14e130ef9c1b10e4a6e7ca6c57db19352eff24878cef81066",
+    "hosts/cursor/fallback/omatic-core-crew/skills/data-analyst/reference/dba-operations.md": "babec75d2f00e336cba5f9ff3cf739d02f2ff6a2236680eee61abb09573343db",
+    "hosts/cursor/fallback/omatic-core-crew/skills/data-analyst/reference/retrieval-disclosure.md": "c4b54771263dd07943fb5c355ecd29525e18d0b86c512960b548db4b8885c188",
+    "hosts/cursor/fallback/omatic-core-crew/skills/data-analyst/reference/vector-search.md": "bf3496f0e610c047a3fb67f20e09ecd96762e0fcf4bc6065329343c45260e106",
+    "hosts/cursor/fallback/omatic-core-crew/skills/fred-storage/SKILL.md": "a25fe1ba884e9cfa6a7a0328a6115832915b75174300a22fdca34d6a449d01f4",
+    "hosts/cursor/fallback/omatic-core-crew/skills/fred-storage/reference/file-vault.md": "6f6e15dee7d3de65d05c0b576284a7fd4bd4f3d2e6fd8ac5bab21d3134ef0273",
+    "hosts/cursor/fallback/omatic-core-crew/skills/fred-storage/reference/read-intelligence.md": "5cf94f1547bdb1ee7aee7cbce75749a750c14af0e54d540c1453e98ebeaf1707",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/SKILL.md": "99fe4b6a026450816b9ab29cee6746fd7bb5c6f5cedaa6541bc4f81c42bcf7c7",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/anchor-commands.md": "8dcc6470f10fd817da74ddcaa3ec886a90a6056e75e9d8c057b9957d37091cb9",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/conversation-key.md": "003ac077bb729aea63adbc33b6ac09fb5ce4c3ff160883570fb7b721f3f6e026",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/factory-construction.md": "c29f89102a44f878d5bba28735e47a6e48433b099039311c5e6bc0eb8181f0bc",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/host-worker-handoff.md": "68d9cca4385aff6b7d8a63a833d882c03e95451353826a89dc40cc1baade6b5b",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/root-cause-triage.md": "7012f726b336c850f93622a41573f6986689aa831be34625aef2918942ff3743",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/routing.md": "ba2a629740f04742b4175afd221418537a49ae6de0ff4fe0f6548703266c5a39",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/sage-standalone.md": "2af437a4df3d378293e766b04aed82b06e368172306d214480da6e55cdcac38a",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/startup-card.md": "5b7ea33649c9104bff1f64a361dbf1eed36ccd3a41e1d7d3caa1bccfe0bc0b29",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/startup-protocol.md": "83c0b9766aac15e78b6f96ade77c682307af5517caadb24c6354a1c11710d099",
+    "hosts/cursor/fallback/omatic-core-crew/skills/probot-orchestrator/reference/triage-method.md": "ed044f458e9bdc80d336abd7ee51b725884cbfa2c189854aad7c98f08b85c8f3",
+    ".claude-plugin/marketplace.json": "d25c796f57ca49ec497b75ca2f0c6bb0aa27e233ebf0434b971e651a41d60b17",
+    ".cursor-plugin/marketplace.json": "6f855c2e01e410c7575c503bfd49dfc5e540bc13fd3c4b4e81f16024063fe41b"
+  }
+}

@@ -20,6 +20,8 @@
 
 This repository is the public source for the Server **connection** plugin. It does **not** replace o-MATIC Server, invent factory grants, ship credentials, or claim workflow completion while Server workflow bindings remain unbound.
 
+**Core-crew 1.1.0 (draft, unreleased).** Claude and Cursor packages are generated from a public-safe gold extract plus the Probot, Fred, and Data skills (`scripts/build_core_crew.py`). The default marketplace layout is one plugin, `omatic-server-connection`, that includes the Server MCP connection and the core crew. A two-plugin fallback already lives under `hosts/*/fallback/`; switch the published marketplace with `--marketplace fallback` if a hosted Claude host skips the bundled plugin. OpenClaw remains at candidate `1.0.1-candidate.4` in this cut. See [docs/HOSTED-CLAUDE-INSTALL-TEST.md](docs/HOSTED-CLAUDE-INSTALL-TEST.md). Draft install from this branch: `/plugin marketplace add lucidIT-LLC/o-matic-server-connector#carver/core-crew-bundle-1.1.0`, then `/plugin install omatic-server-connection --marketplace lucidIT-LLC/o-matic-server-connector`.
+
 ## What it does
 
 1. **One plugin, many hosts** — Cursor, Copilot, OpenClaw, Hermes (and Codex/Grok projections) share `omatic-governance`. Packaging shapes differ; product identity does not.
@@ -38,7 +40,8 @@ One product, host-specific packaging (see `docs/PRODUCT-CONTRACT.md`, `hosts/PLU
 |---|---|---|---|
 | **OpenClaw** | Root package (`openclaw.plugin.json`, `dist-runtime/index.js`, …) | `AGENTS.md` / `SOUL.md` / `IDENTITY.md` / `USER.md` | Native install/reload verified on Jimmy’s Mac at candidate.4 (doctor may warn on archive provenance) |
 | **Hermes** | `hosts/hermes/` | `AGENTS.md` / `HERMES.md` / `SOUL.md` from gold | **OF-90 packaging declared**; live packs + Hermes smoke pending (`hosts/hermes/ACCEPTANCE.md`) |
-| **Cursor** | `hosts/cursor/` (hooks + agent/skill projection) | Cursor agents + `SKILL.md` + method cards | Mac hooks load + MCP `startup` READY measured; Desktop `beforeMCPExecution` on Project-agent MCP path not intercepted |
+| **Claude** | `.claude-plugin/marketplace.json` + `hosts/claude/` (1.1.0 draft) | plugin skills + agents from gold | Package generated; hosted install test not yet run ([docs/HOSTED-CLAUDE-INSTALL-TEST.md](docs/HOSTED-CLAUDE-INSTALL-TEST.md)) |
+| **Cursor** | `hosts/cursor/` hooks plus `hosts/cursor/bundled/` 1.1.0 plugin (draft) | Cursor agents + `SKILL.md` + method cards | Mac hooks load + MCP `startup` READY measured; Desktop `beforeMCPExecution` on Project-agent MCP path not intercepted |
 | **Microsoft 365 Copilot** | `hosts/copilot/` zip + SKILL/agent projection | Agent Skills / declarative packages from gold | **Same plugin**; **OF-90 packaging declared**; tenant upload + gold packs pending (`hosts/copilot/ACCEPTANCE.md`) |
 | **Codex / ChatGPT** | `hosts/codex/` | plugin + agent projection | Candidate packaging; native hook trust / live refusal pending |
 | **Grok** | `hosts/grok/MCP-SETUP.json` | MCP + Bot/paste from gold | MCP URL; `clientEnforcement: false` |
