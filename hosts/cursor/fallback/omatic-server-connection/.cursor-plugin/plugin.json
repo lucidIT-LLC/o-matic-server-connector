@@ -1,0 +1,34 @@
+{
+  "name": "omatic-server-connection",
+  "displayName": "o-MATIC Server Connection",
+  "version": "1.1.0",
+  "description": "o-MATIC Server Connection: reuses the host's OAuth/SSO to reach an existing o-MATIC Server over MCP (cloud default, or an operator-entered on-prem URL). It does not create a Server, dispatch agents, or change authentication.",
+  "author": {
+    "name": "LucidIT, LLC",
+    "email": "info@lucidit.io"
+  },
+  "homepage": "https://o-matic.ai",
+  "repository": "https://github.com/lucidIT-LLC/o-matic-server-connector",
+  "license": "BUSL-1.1",
+  "keywords": [
+    "o-matic",
+    "mcp",
+    "factory",
+    "probot",
+    "fred",
+    "data"
+  ],
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "SERVER_URL": {
+        "type": "string",
+        "title": "o-MATIC Server URL",
+        "description": "Cloud default: https://factory.o-matic.ai/mcp. For on-premises, enter the HTTPS MCP URL for that Server.",
+        "default": "https://factory.o-matic.ai/mcp"
+      }
+    }
+  }
+}

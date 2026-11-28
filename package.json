@@ -5,10 +5,12 @@
   "type": "module",
   "description": "o-MATIC Server Connection: stock-host guards and explicit connection status; unbound workflow capabilities remain blocked.",
   "scripts": {
-    "test": "node --test index.test.mjs peer-memory.test.mjs receipt-contract.test.mjs server-contract.test.mjs shared-host-adapter.test.mjs",
+    "test": "node --test index.test.mjs peer-memory.test.mjs receipt-contract.test.mjs server-contract.test.mjs shared-host-adapter.test.mjs core-crew-packaging.test.mjs",
     "build": "bun build ./release-entry.mjs --target=node --external=openclaw/plugin-sdk/gateway-method-runtime --outfile=./dist-runtime/index.js",
     "release:build": "python3 -B build_release.py",
-    "test:extended": "node --test authenticated-request-adapter.test.mjs native-loop-repair/repair.test.mjs"
+    "test:extended": "node --test authenticated-request-adapter.test.mjs native-loop-repair/repair.test.mjs",
+    "build:core-crew": "python3 -B scripts/build_core_crew.py",
+    "test:core-crew": "python3 -B scripts/build_core_crew.py --check && node --test core-crew-packaging.test.mjs"
   },
   "openclaw": {
     "extensions": [

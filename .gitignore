@@ -12,3 +12,5 @@ dist-current/
 *.pem
 *.key
 credentials*
+
+.claude/
